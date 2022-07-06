@@ -15,6 +15,10 @@
   +plugins.size(450px, 280px)
   background-color: var(--container-color)
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    +plugins.size(580px, 310px)
+
   // medium devices
   +media-lib.breakpoint($br: media-lib.$md)
     +plugins.size(650px, 380px)

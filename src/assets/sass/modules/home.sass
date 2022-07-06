@@ -25,6 +25,11 @@
     left: 0
     transform: translateX(-50%)
 
+    // medium devices
+    +media-lib.breakpoint($br: media-lib.$md)
+      top: initial
+      bottom: 0
+
 .home__container
   justify-items: center
   row-gap: 2.5rem
@@ -35,6 +40,14 @@
     justify-items: flex-end
     row-gap: 0
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 1.5rem
+
+    .home__part:last-child
+      order: -1
+
 .home__ill
   width: 85%
 
@@ -43,8 +56,8 @@
     width: 65%
 
   // medium devices
-  +media-lib.breakpoint($br: media-lib.$sm)
-    width: 60%
+  +media-lib.breakpoint($br: media-lib.$md)
+    width: 100%
 
 .home__ill svg
   +plugins.size(100%, auto)
