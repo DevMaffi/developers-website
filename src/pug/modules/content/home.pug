@@ -1,0 +1,29 @@
+// HOME
+section.home.section
+
+  // HOME CONTAINER
+  .home__container.container.grid
+    // SHAPES
+    .shape.shape_big
+    .shape.shape_small
+
+    // DESIGN ACCENT PARTICLES
+    img.particle#particle1(src="@img/particle1.png", alt="particle")
+    img.particle#particle2(src="@img/particle2.png", alt="particle")
+
+    .home__ill
+      include ../partials/cart-svg.html
+
+    // HOME DATA
+    .home__data
+      h1.section__title.home__title
+        |Разработка 
+        br
+        |интернет-магазина
+        br
+        |с нуля за неделю
+
+      p.home__descr.
+        Дизайн интернет магазина, элементов микро UX, корзин, личного кабинета - от фирменного стиля до пользовательского интерфейса в сжатые сроки с командой Virtual Designers
+
+      button.button.home__button Заказать

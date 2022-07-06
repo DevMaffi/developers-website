@@ -1,0 +1,46 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
+/* HOME
+
+.home
+  position: relative
+
+  .shape
+    position: absolute
+    z-index: -1
+
+  .shape_big
+    top: calc(var(--header-height) + 40px)
+    right: 0
+    transform: translateX(45%)
+
+  .shape_small
+    top: calc(var(--header-height) + 30px)
+    left: 0
+    transform: translateX(-50%)
+
+.home__container
+  justify-items: center
+  row-gap: 2.5rem
+  padding-top: calc(var(--header-height) + 2rem)
+
+.home__ill
+  width: 85%
+
+.home__ill svg
+  +plugins.size(100%, auto)
+
+.home__ill #cart [id^="cart-particle"]
+  opacity: 0
+  transform: scale(0.6)
+  transform-origin: center
+  animation: popUp 3s ease forwards
+  animation-delay: calc(var(--order) * 75ms)
+
+.home__title
+  font-size: var(--h1-font-size)
+
+.home__descr
+  margin-bottom: 2rem
