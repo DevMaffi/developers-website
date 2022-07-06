@@ -16,15 +16,31 @@
 
 .nav__logo img
   height: 2.2rem
+  transition: all .4s ease
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    height: 3.5rem
 
 .nav__menu
+  // Desktop first
+
+  // large devices
   +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
     width: 100%
-    padding: 4.5rem 0 4rem
+    padding: 3.5rem 0 4.5rem
     background-color: var(--first-color)
     +plugins.position(absolute, 0 50% null null)
     transform: translate(50%, var(--header-height))
     overflow: scroll
+
+  // Mobile first
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    display: flex
+    align-items: center
+    column-gap: 2.3rem
 
 .nav__list
   display: flex
@@ -33,6 +49,12 @@
   row-gap: 2.6rem
   padding-bottom: 3rem
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    flex-direction: row
+    column-gap: 2.3rem
+    padding-bottom: initial
+
 .nav__item a
   font:
     weight: 800 
@@ -40,8 +62,41 @@
   text-transform: uppercase
   color: var(--white)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    font:
+      weight: 600 
+      size: var(--small-font-size)
+    text-transform: initial
+    position: relative
+
+    &:before
+      content: ''
+      +plugins.size(100%, 2px)
+      background-color: var(--white)
+      border-radius: 2px
+      +plugins.position(absolute, null 0 -10% null)
+      transform: scaleX(0)
+      transform-origin: right
+      transition: transform .4s ease
+
+    &:hover:before
+      transform: scaleX(1)
+      transform-origin: left
+
+.nav__button
+  display: none
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    display: inline-flex
+
 .nav__toggle
   cursor: pointer
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    display: none
 
 .nav__toggle svg
   width: 3rem

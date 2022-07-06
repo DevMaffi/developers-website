@@ -1,1 +1,51 @@
+// Modules
+
+@use '../../base/media-lib'
+
 /* BUTTONS
+
+.button
+  $border: 2px
+
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  padding: 1rem 0
+  background-color: var(--second-color)
+  border: $border solid var(--second-color)
+    radius: .625rem
+  font:
+    size: var(--smaller-font-size)
+    weight: 700
+  text-transform: uppercase
+  color: var(--white)
+  transition: all .4s ease
+  cursor: pointer
+
+  &:hover
+    border: $border solid var(--border-color)
+
+  &:active
+    background-color: var(--first-color)
+    border: $border solid var(--border-color)
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    width: initial
+    padding: 1.5rem 5.75rem
+
+.button_sm
+  $border: 2px
+
+  width: initial
+  padding: .625rem 2.6rem
+  border-radius: .3rem
+
+  &:hover
+    border: $border solid var(--white)
+
+  &:active
+    background-color: var(--body-color)
+    border: $border solid var(--white)
+    color: var(--first-color)

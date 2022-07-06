@@ -1,3 +1,7 @@
+// Modules
+
+@use '../base/media-lib'
+
 /* MICRO CLASSES
 
 // Handle menu styles
@@ -5,6 +9,11 @@
 .show-menu
   min-height: 280px
   height: 50vh
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    min-height: initial
+    height: initial
 
 .show-menu .nav__menu
   height: 100%
