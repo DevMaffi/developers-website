@@ -1,4 +1,50 @@
+// Modules
+
+@use '../../base/media-lib'
+
 /* PARTICLES
 
-.particle
+#particle1,
+#particle2
   display: none
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    display: inline-block
+    position: absolute
+    z-index: var(--z-particle)
+
+#particle1
+  height: 1.25rem
+  right: 75px
+  bottom: 120px
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    height: 2rem
+    top: calc(var(--header-height) + 50px)
+    right: initial
+    bottom: initial
+    left: 40%
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    height: 2.4rem
+    left: 120px
+
+#particle2
+  height: 2rem
+  top: calc(var(--header-height) + 140px)
+  left: 65px
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    top: initial
+    bottom: 0
+    left: 15px
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    height: 3rem
+    bottom: 30px
+    left: 20px

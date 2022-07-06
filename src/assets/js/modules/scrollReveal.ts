@@ -18,6 +18,10 @@ function applyReveal(): void {
   sr.reveal('.home__title')
   sr.reveal('.home__descr', { delay: 300 })
   sr.reveal('.home__button', { delay: 400 })
+
+  // accent particles
+  sr.reveal('#particle1')
+  sr.reveal('#particle2')
 }
 
 // Exports
