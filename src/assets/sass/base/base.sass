@@ -1,6 +1,10 @@
 // Modules
 
-@use 'vars'
+// plugins
+@use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use 'media-lib'
 
 /* BASE STYLES
 
@@ -13,6 +17,45 @@
 
 html
   font-size: 16px
+  line-height: initial
+  scroll-behavior: smooth
 
 body
-  font-family: vars.$font-family
+  background-color: var(--body-color)
+  font:
+    family: var(--body-font)
+    size: var(--normal-font-size)
+  color: var(--text-color)
+
+h1, h2, h3
+  color: var(--title-color)
+
+h1
+  margin: 0
+  font-weight: 800
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    font-weight: 900
+
+h2
+  font-weight: 800
+
+h3
+  font-weight: 700
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+  height: auto
+
+#{plugins.$all-buttons},
+#{plugins.$all-text-inputs}
+  border: none
+  outline: none
+  font-family: var(--body-font)
