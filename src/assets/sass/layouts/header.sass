@@ -1,1 +1,15 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
 /* HEADER
+
+.header
+  width: 100%
+  min-height: var(--header-height)
+  height: var(--header-height)
+  background-color: var(--first-color)
+  +plugins.position(fixed, 0 null null 0)
+  z-index: var(--z-fixed)
+  transition: all .4s ease
+  overflow: hidden

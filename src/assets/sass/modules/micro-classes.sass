@@ -1,1 +1,15 @@
 /* MICRO CLASSES
+
+// Handle menu styles
+
+.show-menu
+  min-height: 280px
+  height: 50vh
+
+.show-menu .nav__menu
+  height: 100%
+
+.nav__toggle.play #menu [id^="dot-particle"]
+  transform-origin: center
+  animation: menuEffect 1s ease forwards
+  animation-delay: calc(var(--order) * 100ms)

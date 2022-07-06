@@ -1,2 +1,17 @@
 // HEADER
-header.header
+header.header#header
+
+  // NAV CONTAINER
+  nav.nav.container
+    a.nav__logo(href="#")
+      +logo
+
+    // NAV MENU
+    .nav__menu#nav-menu
+      ul.nav__list
+        each link in navLinks
+          li.nav__item
+            a(href=`${link.ref}`)= link.label
+
+    .nav__toggle#nav-toggle
+      include partials/menu-svg

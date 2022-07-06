@@ -1,1 +1,47 @@
+// Modules
+
+// plugins
+@use '../plugins/plugins-dir' as plugins
+
+// media lib 
+@use '../base/media-lib'
+
 /* NAV
+
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: var(--header-height)
+
+.nav__logo img
+  height: 2.2rem
+
+.nav__menu
+  +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
+    width: 100%
+    padding: 4.5rem 0 4rem
+    background-color: var(--first-color)
+    +plugins.position(absolute, 0 50% null null)
+    transform: translate(50%, var(--header-height))
+    overflow: scroll
+
+.nav__list
+  display: flex
+  align-items: center
+  flex-direction: column
+  row-gap: 2.6rem
+  padding-bottom: 3rem
+
+.nav__item a
+  font:
+    weight: 800 
+    size: var(--h3-font-size)
+  text-transform: uppercase
+  color: var(--white)
+
+.nav__toggle
+  cursor: pointer
+
+.nav__toggle svg
+  width: 3rem
