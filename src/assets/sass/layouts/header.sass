@@ -5,9 +5,8 @@
 /* HEADER
 
 .header
-  width: 100%
+  +plugins.size(100%, var(--header-height))
   min-height: var(--header-height)
-  height: var(--header-height)
   background-color: var(--first-color)
   +plugins.position(fixed, 0 null null 0)
   z-index: var(--z-fixed)
