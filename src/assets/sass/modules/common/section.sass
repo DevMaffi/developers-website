@@ -1,3 +1,7 @@
+// Modules
+
+@use '../../base/media-lib'
+
 /* SECTION
 
 .section
@@ -6,3 +10,7 @@
 .section__title
   margin-bottom: 1.25rem
   font-size: var(--h2-font-size)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-bottom: 1.6rem

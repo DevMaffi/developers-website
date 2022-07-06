@@ -20,6 +20,10 @@
     right: 0
     transform: translateX(45%)
 
+    // large devices
+    +media-lib.breakpoint($br: media-lib.$md)
+      top: calc(var(--header-height) + 60px)
+
   .shape_small
     top: calc(var(--header-height) + 30px)
     left: 0
@@ -32,6 +36,7 @@
 
 .home__container
   justify-items: center
+  align-items: center
   row-gap: 2.5rem
   padding-top: calc(var(--header-height) + 2rem)
 
@@ -42,11 +47,15 @@
 
   // medium devices
   +media-lib.breakpoint($br: media-lib.$md)
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: 45% auto
     column-gap: 1.5rem
 
     .home__part:last-child
       order: -1
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    column-gap: 2.5rem
 
 .home__ill
   width: 85%
@@ -74,3 +83,7 @@
 
 .home__descr
   margin-bottom: 2rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-bottom: 3rem
