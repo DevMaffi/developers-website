@@ -1,14 +1,44 @@
+// Modules
+
+@use 'media-lib'
+
 /* ROOT STYLES
 
 :root
   // dimensions
+  --header-height: 3.125rem
 
   // colors
+  --first-color: hsl(211, 96%, 70%)
+  --second-color: hsl(114, 67%, 65%)
+  --title-color: hsl(0, 0%, 28%)
+  --text-color: hsl(0, 0%, 7%)
+  --text-color-light: hsl(0, 0%, 16%) 
+  --text-color-lighter: hsl(0, 0%, 58%)
+  --border-color: hsl(211, 96%, 70%)
+  --body-color: hsl(0, 0%, 100%)
+  --container-color: hsl(211, 100%, 93%)
+
   --black: hsl(0, 0%, 0%)
   --white: hsl(0, 0%, 100%)
 
   // fonts
+  --body-font: 'Montserrat', sans-serif
+
+  --h1-font-size: 1.68rem
+  --h2-font-size: 1.43rem
+  --h3-font-size: 1.1rem
+  --normal-font-size: 1rem
+  --smaller-font-size: .938rem
 
   // z-index
+  --z-tooltip: 10
+  --z-fixed: 100
 
   // responsive typography
+  +media-lib.breakpoint($br: media-lib.$lg)
+    --h1-font-size: 3.125rem
+    --h2-font-size: 2rem
+    --h3-font-size: 1.3rem
+    --normal-font-size: 1.125rem
+    --small-font-size: 1rem
