@@ -16,6 +16,10 @@
   background-color: var(--container-color)
 
   // small devices
+  +media-lib.breakpoint($br: media-lib.$xs, $media-feature: 'max-width')
+    +plugins.size(380px, 220px)
+
+  // small devices
   +media-lib.breakpoint($br: media-lib.$sm)
     +plugins.size(580px, 310px)
 

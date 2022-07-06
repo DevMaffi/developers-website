@@ -67,6 +67,10 @@
   width: 85%
 
   // small devices
+  +media-lib.breakpoint($br: media-lib.$xs, $media-feature: 'max-width')
+    width: 100% 
+
+  // small devices
   +media-lib.breakpoint($br: media-lib.$sm)
     width: 65%
 
