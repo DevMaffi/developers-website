@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../../plugins/plugins-dir' as plugins
+
+// media-lib
+@use '../../base/media-lib'
 
 /* SHAPES
 
@@ -10,6 +14,10 @@
 .shape_big
   +plugins.size(450px, 280px)
   background-color: var(--container-color)
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    +plugins.size(600px, 350px)
 
 .shape_small
   +plugins.size(85px, 65px)
