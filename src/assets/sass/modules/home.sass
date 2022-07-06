@@ -84,6 +84,14 @@
 .home__descr
   margin-bottom: 2rem
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    max-width: 80%
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    max-width: initial
+
   // large devices
   +media-lib.breakpoint($br: media-lib.$lg)
     margin-bottom: 3rem
