@@ -27,11 +27,19 @@
   +media-lib.breakpoint($br: media-lib.$lg)
     +plugins.size(780px, 440px)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.size(860px, 480px)
+
 .shape_small
   +plugins.size(85px, 65px)
   background-color: var(--body-color)
   border: 2px solid var(--second-color)
 
-  // large devices
-  +media-lib.breakpoint($br: media-lib.$lg)
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
     +plugins.size(130px, 80px)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.size(200px, 120px)

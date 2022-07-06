@@ -31,6 +31,7 @@
 
     // medium devices
     +media-lib.breakpoint($br: media-lib.$md)
+      border: 2px solid var(--first-color)
       top: initial
       bottom: 0
 
@@ -57,6 +58,11 @@
   +media-lib.breakpoint($br: media-lib.$lg)
     column-gap: 2.5rem
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    grid-template-columns: 50% auto
+    column-gap: initial
+
 .home__ill
   width: 85%
 
@@ -67,6 +73,10 @@
   // medium devices
   +media-lib.breakpoint($br: media-lib.$md)
     width: 100%
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    transform: translateX(120px) scale(1.1)
 
 .home__ill svg
   +plugins.size(100%, auto)
@@ -95,3 +105,4 @@
   // large devices
   +media-lib.breakpoint($br: media-lib.$lg)
     margin-bottom: 3rem
+    max-width: 480px
