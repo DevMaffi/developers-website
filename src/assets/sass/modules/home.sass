@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media-lib
+@use '../base/media-lib'
 
 /* HOME
 
@@ -26,8 +30,17 @@
   row-gap: 2.5rem
   padding-top: calc(var(--header-height) + 2rem)
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    justify-items: flex-end
+    row-gap: 0
+
 .home__ill
   width: 85%
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    width: 65%
 
 .home__ill svg
   +plugins.size(100%, auto)
