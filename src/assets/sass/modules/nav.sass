@@ -18,8 +18,12 @@
   height: 2.2rem
   transition: all .4s ease
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    height: 2.7rem
+
   // large devices
-  +media-lib.breakpoint($br: media-lib.$lg)
+  +media-lib.breakpoint($br: media-lib.$xl)
     height: 3.5rem
 
 .nav__menu
@@ -28,7 +32,7 @@
   // large devices
   +media-lib.breakpoint($br: media-lib.$lg, $media-feature: 'max-width')
     width: 100%
-    padding: 3.5rem 0 4.5rem
+    padding: 4.5rem 0
     background-color: var(--first-color)
     +plugins.position(absolute, 0 50% null null)
     transform: translate(50%, var(--header-height))
