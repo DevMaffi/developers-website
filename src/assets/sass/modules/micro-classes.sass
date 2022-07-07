@@ -22,3 +22,22 @@
   transform-origin: center
   animation: menuEffect 1s ease forwards
   animation-delay: calc(var(--order) * 100ms)
+
+// Handle active accordion item styles
+
+.accordion-open 
+  padding: 1.5rem 1.5rem 2.5rem
+
+  .services__accordion-indicator
+    background-color: var(--first-color)
+
+  .services__accordion-title
+    font:
+      size: var(--h3-font-size)
+      weight: 700
+
+  .services__accordion-arrow
+    transform: rotate(-90deg)
+
+  .services__accordion-content
+    margin-top: 1.25rem 

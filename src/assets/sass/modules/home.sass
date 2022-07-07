@@ -9,6 +9,7 @@
 /* HOME
 
 .home
+  padding-top: calc(var(--header-height) + 4.5rem)
   position: relative
 
   .shape
@@ -39,7 +40,6 @@
   justify-items: center
   align-items: center
   row-gap: 2.5rem
-  padding-top: calc(var(--header-height) + 2rem)
 
   // small devices
   +media-lib.breakpoint($br: media-lib.$sm)
@@ -49,6 +49,7 @@
   // medium devices
   +media-lib.breakpoint($br: media-lib.$md)
     grid-template-columns: 45% auto
+    justify-items: flex-start
     column-gap: 1.5rem
 
     .home__part:last-child

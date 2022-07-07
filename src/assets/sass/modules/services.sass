@@ -1,0 +1,64 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
+/* SERVICES
+
+.services
+  background-color: var(--container-color)
+
+.services__title
+  text-align: center
+
+.services__accordion
+  display: flex
+  flex-direction: column
+  row-gap: .625rem
+
+.services__accordion-item
+  padding: 1.5rem
+  background-color: var(--body-color)
+  border-radius: .625rem
+  transition: all .4s ease
+
+.services__accordion-header
+  display: flex
+  align-items: center
+  cursor: pointer
+
+.services__accordion-indicator
+  display: inline-flex
+  +plugins.size(1rem)
+  margin-right: 1.1rem
+  background-color: var(--second-color)
+  border-radius: 50%
+  transition: all .4s ease
+
+.services__accordion-title
+  font:
+    size: var(--normal-font-size)
+    weight: 400 
+  max-width: 75%
+  transition: all .4s ease
+
+.services__accordion-arrow
+  display: inline-flex
+  margin-left: auto
+  transform: rotate(90deg)
+  transition: all .4s ease
+
+.services__accordion-content
+  height: 0px
+  margin-left: .375rem
+  border-left: 1px solid var(--text-color-lighter)
+  transition: all .4s ease
+  overflow: hidden
+
+.services__accordion-descr
+  display: flex
+  flex-direction: column
+  row-gap: 2rem
+  margin: 1rem 0 1rem 1.75rem
+
+.services__img
+  display: none

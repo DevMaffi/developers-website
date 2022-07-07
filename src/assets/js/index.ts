@@ -1,15 +1,22 @@
 // Modules
 
 // modules
-// @ts-ignore
-import { handleMenu, applyReveal } from '@modules'
+import {
+  handleScroll,
+  handleMenu,
+  handleAccordion,
+  applyReveal,
+  // @ts-ignore
+} from '@modules'
 
 // styles
 import '@sass/styles.sass'
 
 // Setup handlers
 
+handleScroll()
 handleMenu()
+handleAccordion()
 
 // Scroll reveal
 

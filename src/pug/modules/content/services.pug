@@ -1,0 +1,36 @@
+// SERVICES
+section.section.services#services
+
+  // SERVICES CONTAINER
+  .services__container.container.grid
+
+    // SERVICES DATA
+    h2.section__title.services__title.
+      Что входит в услугу по созданию дизайна интернет-магазина?
+
+    // SERVICES ACCORDION
+    .services__accordion
+
+      each item in servicesAccordion
+        // ACCORDION ITEM
+        .services__accordion-item
+
+          // ACCORDION HEADER
+          .services__accordion-header
+            span.services__accordion-indicator
+            h3.services__accordion-title= item.title
+
+            img.services__accordion-arrow(src="@img/chevron.png", alt="chevron")
+
+          // ACCORDION CONTENT
+          .services__accordion-content
+
+            // ACCORDION DESCRIPTION
+            .services__accordion-descr
+              each paragraph in item.descr
+                p= paragraph
+
+      .services__img
+        picture
+          source(srcset="@img/bag.webp" type="image/webp")
+          img(src="@img/bag.png", alt="bag")

@@ -19,6 +19,9 @@ function applyReveal(): void {
   sr.reveal('.home__descr', { delay: 300 })
   sr.reveal('.home__button', { delay: 400 })
 
+  // services section
+  sr.reveal('.services__accordion-item', { interval: 200 })
+
   // accent particles
   sr.reveal('#particle1')
   sr.reveal('#particle2')
