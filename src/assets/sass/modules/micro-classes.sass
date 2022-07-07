@@ -23,6 +23,17 @@
   animation: menuEffect 1s ease forwards
   animation-delay: calc(var(--order) * 100ms)
 
+// Handle illustrations animation
+
+.home__ill.play #cart [id^="cart-particle"]
+  transform-origin: center
+  animation: popUp 3s ease forwards
+  animation-delay: calc(var(--order) * 75ms)
+
+.services__img.play
+  transform-origin: center
+  animation: popUp 3s ease forwards
+
 // Handle active accordion item styles
 
 .accordion-open 

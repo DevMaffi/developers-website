@@ -30,10 +30,29 @@ function detectActive() {
   sections?.forEach(section => handleActiveLocation(section, scrollY))
 }
 
+// Handling the animation playback state when the element is in view
+
+const reveals = document.querySelectorAll(
+  '.reveal'
+) as NodeListOf<HTMLElement> | null
+
+const windowHeight: number = window.innerHeight
+
+function startPlayback(): void {
+  reveals?.forEach(entry => {
+    const elementTop: number = entry.getBoundingClientRect().top
+
+    if (elementTop < windowHeight / 1.3) entry.classList.add('play')
+  })
+}
+
 // Add event handlers on window
 
 function handleScroll(): void {
+  startPlayback()
+
   window.addEventListener('scroll', detectActive)
+  window.addEventListener('scroll', startPlayback)
 }
 
 // Exports
