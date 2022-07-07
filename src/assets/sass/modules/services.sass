@@ -1,11 +1,18 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media-lib
+@use '../base/media-lib'
 
 /* SERVICES
 
 .services
   background-color: var(--container-color)
+
+.services__container
+  position: relative
 
 .services__title
   text-align: center
@@ -21,6 +28,10 @@
   border-radius: .625rem
   transition: all .4s ease
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    padding: 1.25rem 2.75rem
+
 .services__accordion-header
   display: flex
   align-items: center
@@ -33,6 +44,11 @@
   background-color: var(--second-color)
   border-radius: 50%
   transition: all .4s ease
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    +plugins.size(1.5rem)
+    margin-right: 1.75rem
 
 .services__accordion-title
   font:
@@ -54,11 +70,24 @@
   transition: all .4s ease
   overflow: hidden
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    margin-left: .625rem
+
 .services__accordion-descr
   display: flex
   flex-direction: column
   row-gap: 2rem
-  margin: 1rem 0 1rem 1.75rem
+  padding: 1rem 3rem 1rem 1.75rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$lg)
+    padding-left: 2.25rem
 
 .services__img
   display: none
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    display: block
+    +plugins.position(absolute, null -20% -40px null)
