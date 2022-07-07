@@ -12,6 +12,10 @@
   padding-top: calc(var(--header-height) + 4.5rem)
   position: relative
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    margin-bottom: 2rem
+
   .shape
     position: absolute
     z-index: -1
